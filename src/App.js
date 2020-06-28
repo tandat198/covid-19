@@ -27,7 +27,7 @@ function App() {
                 <div className='container'>
                     <h1 className='text-light h2'>Covid-19 Statistics Of All Countries</h1>
                     <hr />
-                    <Table striped bordered hover variant='dark'>
+                    <Table className='home-page' striped bordered hover variant='dark'>
                         <thead>
                             <tr>
                                 <th>Country</th>
@@ -54,6 +54,7 @@ function App() {
                             </tr>
                         </tbody>
                     </Table>
+                    )}
                 </div>
             </div>
 
@@ -83,26 +84,24 @@ function App() {
             </Modal>
 
             {/* Statistics Of Country */}
-            <div>
-                <div className='bg-primary py-5'>
-                    <div className='container d-flex justify-content-between'>
-                        <div className='d-flex flex-column'>
-                            <span className='text-light h4'>Day: 2020-06-20</span>
-                            <span className='text-light h4'>Country: China</span>
-                            <span className='text-light h4'>Continent: Asia</span>
-                            <span className='text-light h4'>Population: 1439323776</span>
-                        </div>
-                        <div className='d-flex flex-column'>
-                            <span className='text-warning h4'>Active: 1000000</span>
-                            <span className='text-danger h4'>Deaths: 100000</span>
-                            <span className='text-success h4'>Recovered: 10000</span>
-                            <span className='text-secondary h4'>Total: 1000000</span>
-                        </div>
-                        <div className='d-flex flex-column'>
-                            <span className='text-success h4'>Tests: 200000</span>
-                            <span className='text-warning h4'>New: +1000</span>
-                            <span className='text-danger h4'>Critical: 100</span>
-                        </div>
+            <div className='bg-primary py-5'>
+                <div className='container d-flex justify-content-between'>
+                    <div className='d-flex flex-column'>
+                        <span className='text-light h4'>Day: 2020-06-20</span>
+                        <span className='text-light h4'>Country: China</span>
+                        <span className='text-light h4'>Continent: Asia</span>
+                        <span className='text-light h4'>Population: 1439323776</span>
+                    </div>
+                    <div className='d-flex flex-column'>
+                        <span className='text-warning h4'>Active: 1000000</span>
+                        <span className='text-danger h4'>Deaths: 100000</span>
+                        <span className='text-success h4'>Recovered: 10000</span>
+                        <span className='text-secondary h4'>Total: 1000000</span>
+                    </div>
+                    <div className='d-flex flex-column'>
+                        <span className='text-success h4'>Tests: 200000</span>
+                        <span className='text-warning h4'>New: +1000</span>
+                        <span className='text-danger h4'>Critical: 100</span>
                     </div>
                 </div>
             </div>
