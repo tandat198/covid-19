@@ -1,6 +1,14 @@
 @import "custom";
 
+.header {
+    height: 4rem;
+}
+
 .home-page {
+    min-height: calc(100vh - 4rem);
+}
+
+.table {
     animation: fadein 300ms;
 }
 
