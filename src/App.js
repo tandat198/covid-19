@@ -7,10 +7,23 @@ import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
 import FormControl from "react-bootstrap/FormControl";
 import InputGroup from "react-bootstrap/InputGroup";
+import Form from "react-bootstrap/Form";
+import Loader from "./components/Loader";
+import Dropdown from "react-bootstrap/Dropdown";
+import moment from "moment";
 
 function App() {
+    const DropdownDays = () => {
+        const listDays = [];
+        for (let i = 0; i < 10; i++) {
+            const day = moment().subtract(i, "days").format("MM-DD-YYYY");
+            listDays.push(<Dropdown.Item>{day}</Dropdown.Item>);
+        }
+        return listDays;
+    };
     return (
         <Fragment>
+            {/* Header */}
             <div className='header bg-primary py-2'>
                 <div className='container'>
                     <Navbar className='d-flex justify-content-between px-0' bg='primary' variant='dark'>
@@ -27,6 +40,11 @@ function App() {
                 <div className='container'>
                     <h1 className='text-light h2'>Covid-19 Statistics Of All Countries</h1>
                     <hr />
+                    <Form>
+                        <Form.Group>
+                            <Form.Control type='text' placeholder='Search country' />
+                        </Form.Group>
+                    </Form>
                     <Table className='home-page' striped bordered hover variant='dark'>
                         <thead>
                             <tr>
@@ -85,6 +103,13 @@ function App() {
 
             {/* Statistics Of Country */}
             <div className='bg-primary py-5'>
+                <Dropdown>
+                    <Dropdown.Toggle variant='success'>Statistics Of Another Day</Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                        <DropdownDays />
+                    </Dropdown.Menu>
+                </Dropdown>
                 <div className='container d-flex justify-content-between'>
                     <div className='d-flex flex-column'>
                         <span className='text-light h4'>Day: 2020-06-20</span>
@@ -105,6 +130,8 @@ function App() {
                     </div>
                 </div>
             </div>
+
+            <Loader />
         </Fragment>
     );
 }
