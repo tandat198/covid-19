@@ -145,7 +145,7 @@ function App() {
                 </Modal.Footer>
             </Modal>
 
-            {/* Statistics Of Country */}
+            {/* Statistics Of One Country */}
             <div className='bg-primary py-5'>
                 <div className='container d-flex justify-content-between'>
                     <div className='d-flex flex-column'>
