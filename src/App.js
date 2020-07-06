@@ -40,11 +40,22 @@ function App() {
                 <div className='container'>
                     <h1 className='text-light h2'>Covid-19 Statistics Of All Countries</h1>
                     <hr />
-                    <Form>
-                        <Form.Group>
-                            <Form.Control type='text' placeholder='Search country' />
-                        </Form.Group>
-                    </Form>
+                    <div className='d-flex justify-content-between'>
+                        <Form className='w-75'>
+                            <Form.Group>
+                                <Form.Control type='text' placeholder='Search country' />
+                            </Form.Group>
+                        </Form>
+                        <Dropdown>
+                            <Dropdown.Toggle variant='dark'>Sort by</Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                <Dropdown.Item>Active: Low to High</Dropdown.Item>
+                                <Dropdown.Item>Active: High to Low</Dropdown.Item>
+                                <Dropdown.Item>Deaths: Low to High</Dropdown.Item>
+                                <Dropdown.Item>Deaths: High to Low</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </div>
                     <Table className='home-page' striped bordered hover variant='dark'>
                         <thead>
                             <tr>
