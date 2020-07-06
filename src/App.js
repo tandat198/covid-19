@@ -114,13 +114,15 @@ function App() {
 
             {/* Statistics Of Country */}
             <div className='bg-primary py-5'>
-                <Dropdown>
-                    <Dropdown.Toggle variant='success'>Statistics Of Another Day</Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                        <DropdownDays />
-                    </Dropdown.Menu>
-                </Dropdown>
+                <div className='container'>
+                    <Dropdown>
+                        <Dropdown.Toggle variant='success'>Statistics Of Another Day</Dropdown.Toggle>
+                        <Dropdown.Menu>
+                            <DropdownDays />
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </div>
+                <hr />
                 <div className='container d-flex justify-content-between'>
                     <div className='d-flex flex-column'>
                         <span className='text-light h4'>Day: 2020-06-20</span>
